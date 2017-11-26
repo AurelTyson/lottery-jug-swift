@@ -2,6 +2,7 @@
 
 ![Swift](https://img.shields.io/badge/Swift-4-green.svg?style=flat)
 ![Vapor](https://img.shields.io/badge/Vapor-2.0-green.svg?style=flat)
+[![Build Status](https://travis-ci.org/AurelTyson/lottery-jug-swift.svg?branch=master)](https://travis-ci.org/AurelTyson/lottery-jug-swift)
 
 Lottery application for Jug Montpellier in Swift using [Vapor](https://github.com/vapor/vapor) framework.
 

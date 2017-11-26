@@ -31,8 +31,9 @@ public final class EventBriteController {
         self.attendees = []
         
         // Loading last event and all attendees
-        let lLastEventId = try self.getLastEvent()?.id
-        try self.loadAllAttendees(eventId: lLastEventId ?? "")
+        if let lLastEventId = try self.getLastEvent()?.id {
+            try self.loadAllAttendees(eventId: lLastEventId)
+        }
         
     }
     
@@ -65,9 +66,15 @@ public final class EventBriteController {
                                                          "organizer.id" : self.organizerId,
                                                          "token" : self.token])
         
-        let lEvents: Events = try lResponse.decodeJSONBody()
-        
-        return lEvents.events.first
+        do {
+            
+            let lEvents: Events = try lResponse.decodeJSONBody()
+            return lEvents.events.first
+            
+        }
+        catch {
+            return nil
+        }
         
     }
     
