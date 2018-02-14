@@ -9,7 +9,7 @@ let package = Package(
         .executable(name: "Run", targets: ["Run"])
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "2.4.0")),
+        .package(url: "https://github.com/vapor/vapor.git", .exact("2.4.4")),
     ],
     targets: [
         .target(name: "App", dependencies: ["Vapor"],

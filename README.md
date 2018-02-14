@@ -6,7 +6,7 @@
 
 Lottery application for Jug Montpellier in Swift using [Vapor](https://github.com/vapor/vapor) framework.
 
-## To dev (Mac OS)
+## To dev (under Mac OS)
 To generate a Xcode project :
 
 * Install Xcode
@@ -14,14 +14,19 @@ To generate a Xcode project :
 * Execute `vapor xcode`
 * Open the generated project
 
-## To build under Linux
+## To build (Docker)
 ```
 docker run --rm -ti -v $(pwd):/vapor asensei/vapor:latest vapor build
 ```
 
-## To run
+## To run (Docker)
 ```
 docker run --rm -ti -p 8080:8080 -e ORGA_ID='XXXXX' -e TOKEN='XXXXXXX' -v $(pwd):/vapor asensei/vapor:latest vapor run
+```
+
+## To test (Docker)
+```
+docker run --rm -ti -p 8080:8080 -e ORGA_ID='XXXXX' -e TOKEN='XXXXXXX' -v $(pwd):/vapor asensei/vapor:latest vapor test
 ```
 
 ## To get winners
